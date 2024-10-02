@@ -16,7 +16,7 @@ fi
 #####################
 
 # INSTALL
-sudo dnf -y install dnf-automatic
+sudo dnf -y install dnf-automatic dnf-utils
 
 # CONFIGURE
 cp /etc/dnf/automatic.conf /tmp/automatic.conf.original
