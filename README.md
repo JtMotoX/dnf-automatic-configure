@@ -31,3 +31,9 @@ View Logs
 ```bash
 sudo journalctl -u dnf-automatic.service -f
 ```
+
+Check if reboot is required
+
+```bash
+sudo needs-restarting -r
+```
