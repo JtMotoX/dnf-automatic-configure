@@ -9,7 +9,7 @@ if [ "$1" != "run" ]; then
 	printf "\t$0 run\n"
 	echo
 	echo "To setup dnf-automatic on a remote system, execute the following:"
-	printf "\tssh cloud-user@vmwuckweb02-stg 'bash -s run' < ./install.sh\n"
+	printf "\tssh user@server 'bash -s run' < ./install.sh\n"
 	exit 1
 fi
 
