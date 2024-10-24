@@ -35,7 +35,7 @@ sudo journalctl -u dnf-automatic.service -f
 Check if successful run within past 48h
 
 ```bash
-if [ $(date -d"$(sudo journalctl -u dnf-automatic.service 2>/dev/null | grep 'Deactivated successfully' | tail -n1 | awk '{print $1" "$2}')" +%s 2>/dev/null) -ge $(date -d'2 days ago' +%s) ] 2>/dev/null; then echo 'Successfully ran within the past 24 hours.'; else echo 'Did not complete within the past 24 hours.'; fi
+if [ $(date -d"$(sudo journalctl -u dnf-automatic.service 2>/dev/null | grep 'Deactivated successfully' | tail -n1 | awk '{print $1,$2}')" +%s 2>/dev/null) -ge $(date -d'2 days ago' +%s) ] 2>/dev/null; then echo 'Successfully ran within the past 24 hours.'; else echo 'Did not complete within the past 24 hours.'; fi
 ```
 
 Check if reboot is required
